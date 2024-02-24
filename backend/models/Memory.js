@@ -3,35 +3,35 @@ const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
   name: {
-    type: string,
+    type: String,
     require: true,
   },
   text: {
-    type: string,
+    type: String,
     required: true,
   },
 });
 
-const MemorySchema({
+const MemorySchema = new Schema(
   {
     title: {
-      type: string,
+      type: String,
       require: true,
     },
     src: {
-      type: string,
+      type: String,
       required: true,
-    }
-    description: {
-      type: string,
-      require: true,
-    }
-    favorite: {
-      type:Boolean,
     },
-    comments: [commentSchema]
+    description: {
+      type: String,
+      require: true,
+    },
+    favorite: {
+      type: Boolean,
+    },
+    comments: [commentSchema],
   },
-{ timetamps: true }
-})
+  { timestamps: true }
+);
 
-module.exports = mongoose.model("memory", MemorySchema)
+module.exports = mongoose.model("memory", MemorySchema);
