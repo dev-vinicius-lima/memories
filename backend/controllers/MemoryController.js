@@ -25,6 +25,16 @@ const createMemory = async (req, res) => {
   }
 };
 
+const getMemories = async (req, res) => {
+  try {
+    const memories = await Memory.find();
+    res.json(memories);
+  } catch (error) {
+    res.status(500).send("ocorreu um erro!");
+  }
+};
+
 module.exports = {
   createMemory,
+  getMemories,
 };
