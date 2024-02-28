@@ -1,0 +1,23 @@
+.add_memory_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.add_memory_page h2 {
+  color: #1146a6;
+  padding: 2rem 0 1rem;
+  text-align: centers;
+}
+
+.add_memory_page form {
+  max-width: 500px;
+}
+
+.add_memory_page p {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.7rem;
+}
