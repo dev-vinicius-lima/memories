@@ -25,7 +25,7 @@ const Home = () => {
                 alt={memory.title}
               />
               <p>{memory.title}</p>
-              <Link className="btn" to={`/${memory._id}`}>
+              <Link className="btn" to={`/memories/${memory._id}`}>
                 Comentar
               </Link>
             </div>
